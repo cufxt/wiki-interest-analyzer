@@ -1,0 +1,23 @@
+{
+  "name": "wiki-interest-analyzer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Analyze Wikipedia pageview trends for a topic. Node built-ins only at runtime.",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "search": "node scripts/search_article.ts",
+    "fetch": "node scripts/fetch_pageviews.ts",
+    "analyze": "node scripts/analyze_series.ts",
+    "chart": "node scripts/plot_chart.ts",
+    "report": "node scripts/generate_report.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}

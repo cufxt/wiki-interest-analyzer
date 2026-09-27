@@ -1,0 +1,8 @@
+node_modules/
+.zed
+
+# Generated analysis artifacts
+result/
+pageviews_*.json
+analysis_*.json
+*.svg

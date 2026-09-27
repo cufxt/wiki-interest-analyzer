@@ -1,0 +1,23 @@
+[
+  { "query": "Is interest in intermittent fasting growing on English Wikipedia? Last 2 years.", "should_trigger": true, "split": "train" },
+  { "query": "Порівняй зростання інтересу до веб-розробки в польськомовній та чеськомовній Wikipedia за останні два роки.", "should_trigger": true, "split": "train" },
+  { "query": "проаналізуй інтерес до астрономії в україномовній вікіпедії", "should_trigger": true, "split": "train" },
+  { "query": "should we add a course about web development? check interest in Polish wikipedia", "should_trigger": true, "split": "train" },
+  { "query": "which language edition looks more promising for a new feature about intermittent fasting", "should_trigger": true, "split": "train" },
+  { "query": "чи росте популярність теми штучний інтелект у Wikipedia", "should_trigger": true, "split": "train" },
+  { "query": "make a chart of wikipedia pageviews for 'web design' in Polish, last 2 years", "should_trigger": true, "split": "train" },
+  { "query": "compare pageview trends for 'web development' on uk and pl wikipedia over the last year", "should_trigger": true, "split": "validation" },
+  { "query": "I want to know if people read more about astronomy on Ukrainian Wikipedia this year", "should_trigger": true, "split": "validation" },
+  { "query": "ми думаємо запустити продукт у Чехії — чи зростає інтерес до теми на чеській Вікіпедії", "should_trigger": true, "split": "validation" },
+
+  { "query": "Write a new Wikipedia article about web development.", "should_trigger": false, "split": "train" },
+  { "query": "Edit the Wikidata item for web development.", "should_trigger": false, "split": "train" },
+  { "query": "Analyze this CSV of website traffic and make a chart.", "should_trigger": false, "split": "train" },
+  { "query": "Translate this article from Polish to English.", "should_trigger": false, "split": "train" },
+  { "query": "Compare interest rates in Poland and Czechia.", "should_trigger": false, "split": "train" },
+  { "query": "Generate a PDF report of our sales data.", "should_trigger": false, "split": "train" },
+  { "query": "What is web development?", "should_trigger": false, "split": "validation" },
+  { "query": "Summarize the Wikipedia article on astronomy.", "should_trigger": false, "split": "validation" },
+  { "query": "How many edits did Wikipedia get last year?", "should_trigger": false, "split": "validation" },
+  { "query": "Find Wikipedia articles about astronomy.", "should_trigger": false, "split": "validation" }
+]

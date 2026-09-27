@@ -1,0 +1,35 @@
+[
+  {
+    "name": "single-language growth check",
+    "query": "Is interest in 'intermittent fasting' growing on the English Wikipedia? Last 2 years.",
+    "expected_behavior": [
+      "Runs search_article.ts for en, then fetch_pageviews.ts for the chosen article",
+      "Runs analyze_series.ts and plot_chart.ts on the results",
+      "States direction and percentChange from the metrics (not an invented number)",
+      "Names the selected article with a direct Wikipedia URL",
+      "States that pageviews reflect attention, not demand"
+    ]
+  },
+  {
+    "name": "multi-language comparison, no proxy substitution",
+    "query": "Порівняй зростання інтересу до веб-розробки в польськомовній та чеськомовній Wikipedia за останні два роки.",
+    "expected_behavior": [
+      "Uses one batch search call with --lang pl --lang cs",
+      "Selects an article per language independently",
+      "Does NOT substitute a related article (e.g. 'web design') for a missing direct one; skips the language instead",
+      "Batch-fetches pageviews for both languages",
+      "Compares direction and relative change across editions and does not compare absolute counts as audience size",
+      "Uses the last 24 complete months (ends at the previous month, not today)"
+    ]
+  },
+  {
+    "name": "optional PDF only after explicit confirmation",
+    "query": "Проаналізуй інтерес до астрономії в україномовній Wikipedia за останні 2 роки",
+    "expected_behavior": [
+      "Completes Steps 1-7 and writes the chat summary + shows the chart",
+      "Asks whether the user wants a PDF report",
+      "Does NOT create any PDF before the user confirms (no generate_report.ts call)",
+      "On confirmation: writes an English manifest matching the documented schema and runs generate_report.ts once"
+    ]
+  }
+]
